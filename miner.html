@@ -1,0 +1,614 @@
+
+<style type="text/css">
+*{
+	transition-duration: 0.3s;
+	font-family: 'open sans', sans-serif;
+	color: #444;
+	line-height: 150%;
+	/*/padding: 5px;*/
+
+}
+
+
+/*SIDEBAR START*/
+.sidebar {
+	width: 4vw;
+	float: left;
+	margin-left: -9vw;
+	position: relative;
+	z-index:0;
+	padding-top: 30px;
+}
+.sidebar .sidenotes{
+	width: 8vw;
+	min-height: 30px;
+	background: #fa0;
+	padding: 5px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	box-shadow:5px 5px 10px #444;
+	transform: rotate(-5deg)
+}
+.sidebar .sidenotes img{
+	height: 50px;
+	display: block;
+}.sidebar .sidenotes a{
+	text-decoration: none;
+	font-weight: bolder;
+}
+/*.sidebar .sidenotes span{
+	display: none;
+}*/
+.sidebar .sidenotes:hover {
+	background: #feb;
+}
+
+@media screen and (max-width: 800px) {
+	.sidebar {
+		float: none;
+		margin: 0px;
+		margin-top: 10px;
+		padding: 3px;
+		padding-top: 5px;
+		width: auto;
+		/*text-align: center;*/
+	}
+	.sidebar .sidenotes{
+		transform: none;
+		display: inline-table;
+		margin: 4px;
+		margin-bottom: 5px;
+		margin-top: -40px;
+		width: inherit;
+		box-shadow:5px 0px 10px #444;
+	}
+	.sidebar .sidenotes img{
+		display: none;
+	}
+	.sidebar .sidenotes span{
+		display: block;
+	}
+}
+/*SIDEBAR END*/
+
+
+.i1{/*input*/
+	border: solid 0px #ccc;
+	border-bottom: solid 2px #888;
+	padding: -2px;
+	padding-left: 5px;
+	margin-top: -7px;
+	margin-bottom: 6px;
+	font-size: 14px;
+	display: block;
+	color: #888;
+	background: transparent;
+}
+.i1:focus {
+	color: #444;
+	padding: 2px;
+	padding-left: 5px;
+	margin-top: 2px;
+	outline: none;
+	border-color: #69f;
+	margin-bottom: -5px;
+	font-size: 14px;
+}
+.i2{/*input*/
+	border: solid 0px #ccc;
+	border-bottom: solid 1px #888;
+	padding: 2px;
+	outline: none;
+	padding-left: 5px;
+	padding-bottom: 0px;
+	background: transparent;
+	font-size: 14px;
+	display: block;
+	color: #888;
+}
+.i3{/*input*/
+	border: solid 0px #ccc;
+	border-bottom: solid 1px #888;
+	padding: 2px;
+	outline: none;
+	padding-left: 5px;
+	padding-bottom: 0px;
+	font-size: 14px;
+	color: #000;
+	width: 100%;
+	background: transparent;
+}
+.b1{/*button*/
+	/text-align: center;
+	padding: 7px;
+	margin:10px;
+	outline: none;
+	background: #69f;
+	border:solid 1px #69f;
+	color: #fff;
+	font-size: 14px;
+}
+.b1:hover{
+	background: #47f;
+
+}
+.b1:active{
+	background: #9cf;
+
+}
+
+/*ada kotaknya*/
+.box1{
+	margin: 5px;
+	margin-top: 20px;
+	border:1px solid #888;
+	padding: 5px;
+}
+.box1 .h1{
+	background: #fc6;
+	margin: -5px;
+	margin-bottom: 5px;
+}
+
+/*footnote*/
+.box2{
+	margin-top: 10px;
+	padding: 15px;
+	/padding-bottom: 20px;
+	/padding-top: 20px;
+	background: #bef;
+	font-size: 10px;
+}
+
+.blok{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	min-height: 100%
+	padding: 0px;
+}
+.blok .modal {
+	background: #eee;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	padding: 0px;
+}
+.blok .modal .content {
+	background: #fff;
+	text-align: left;
+	position: relative;
+	margin: 20px;
+	padding: 20px;
+	width: 80%;
+	min-height: 50%;
+	/*border-radius: 2px;*/
+	box-shadow: 0px 5px 10px #888;
+	max-width: 800px;
+}
+.h3 {
+	font-size: 100%;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 3px;
+	margin: 3px;
+
+}
+.h1 {
+	font-size: 120%;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 3px;
+	margin: 3px;
+
+}
+.h2 {
+	font-size: 150%;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 3px;
+	margin-bottom: 10px;
+
+}
+
+
+.e1{
+	display: inline-flex;
+	width: 90%;
+	margin-bottom: 10px;
+	padding: 0px;
+}
+.t1{
+	width: 95%;
+	border:1px solid #eee;
+	border-collapse: collapse;
+	margin: 5px;
+}
+.t1 th {
+	font-size: 14px;
+}
+.t1 tr td {
+	border: transparent;
+}
+.ta1{
+	width:95%;
+	background:#fff;
+	height:300px;
+	padding: 10px;
+	resize: vertical;
+	font-family: monospace;
+	font-size: 12px;
+	border:1px solid #444;
+
+	transition-duration: 0s;
+}
+
+.footer{
+	margin-top: 80px;
+	padding: 15px;
+	background: #feb;
+	font-size: 10px;
+	vertical-align: bottom;
+}
+
+</style>
+
+
+<div class="blok">
+	<div class="modal">
+		<center>
+			<div class="content" style="max-width: 850px;width: 75%">
+				<div class="sidebar">
+				</div>
+
+				<div style="background-color: inherit;margin: -20px;padding: inherit;position: relative;z-index: 1;border-radius:inherit; box-shadow: inherit;">
+					<div class="box2" style="margin: -20px;margin-bottom: 30px;font-size: 100%; padding: 5px">
+						<h1 class="h2">Cosmos Quest Auto Fight</h1>
+					</div>
+					<div style="margin-top: 10px;margin-left: 10px;text-align:justify;">
+						<h2 class="h1" style="margin-left:0px"><span style="color:#a00">Warning</span></h2>
+						<span style="color:#a00">We have already reminded you, DO WITH YOUR OWN RISK, especially probability to get banned</span>. Although just an IP ban.
+					</div>
+					<div style="margin-top: 10px;margin-left: 10px;text-align:justify;">
+						<h2 class="h1" style="margin-left:0px">How It Works?</h2>
+						You can only inviting for fight one time per hour. But, you can accept the invitation any time. In this tool, your account will have 7200 bot accounts. This 7200 represent seconds in two hours. Alternately, they invite you for a fight. Normally, you will never lose because there are no monsters or heroes in their lineup.
+						<div id="__autofight" ></div>
+					</div>
+
+					<div class="box2" style="margin: -20px;margin-top: 30px;">
+						This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.<br/>Developed by Ipakerok 46
+					</div>
+				</div>
+			</div>
+		</center>
+	</div>
+</div>
+
+
+</body>
+</html>
+<script type="text/javascript" src="https://download.playfab.com/PlayFabClientApi.js"></script>
+<script>
+function form(title,type="text", value=""){
+	var label=document.createElement("div"),
+	container=document.createElement("div"),
+	input=document.createElement("input");
+	if(type=="select"){
+		value = value || [];
+		input = document.createElement("select");
+		for(var i of value){
+			var option = document.createElement("option");
+			option.setAttribute("value",i);
+			option.innerHTML = i;
+			input.appendChild(option);
+		}
+	}else
+	if(type=="textarea"){
+		input=document.createElement("textarea");
+		input.innerHTML = value;
+	}else{
+		input.setAttribute("type", type);
+		input.setAttribute("value", value);
+	}
+
+	label.innerHTML="<b>"+title+"</b>";
+	container.appendChild(label);
+	container.appendChild(input);
+	container.setAttribute("style","margin:10px");
+	return {
+		c : container,
+		i : input
+	}
+}
+
+window.onload = function(){
+	var body = document.getElementById('__autofight'),
+	lanjut = false,
+	alive = false,
+	loggedin = false,
+	isi = document.createElement('div'),
+	textarea = document.createElement('div'),
+	botsettingpanel = document.createElement('div'),
+	gamelink = document.createElement('a'),
+	isicookie = [],
+	authdata = {
+		KongregateId : "",
+		AuthTicket : "",
+		TitleId : "e3fa",
+	};
+	var setting = {
+		claimmiracles : false,
+		normaldelay : 4000,
+		limitdelay : 10000,
+		logmax :160
+	}
+
+	document.cookie.split(";").map(a=>a.trim().split("=")).map(a=>isicookie[a[0]]=a[1]);
+	if(isicookie.__userData){
+		try{
+			var i = JSON.parse(atob(isicookie.__userData));
+			authdata.KongregateId = i.KongregateId;
+			authdata.AuthTicket = i.AuthTicket;
+		}catch(e){}
+	}
+
+	gamelink.innerHTML = "Go to game" ;
+	gamelink.setAttribute('target','_blank');
+	gamelink.setAttribute('href','#');
+
+	//form
+	var a = form("Title Id", "text", PlayFab.settings.titleId || "e3fa");
+	a.i.setAttribute('style', 'width:95%');
+	isi.appendChild(a.c);
+	if(isicookie.__userData)a.i.style.border = "solid 1px";
+	a.i.onchange = function(){
+		authdata.TitleId=this.value;
+	}
+
+	var a = form("Kongregate Id", "text", authdata.KongregateId );
+	a.i.setAttribute('style', 'width:95%');
+	isi.appendChild(a.c);
+	if(isicookie.__userData)a.i.style.border = "#ee0 solid 1px";
+	a.i.onchange = function(){
+		authdata.KongregateId=this.value;
+	}
+	a.i.onfocus = function(){
+		this.style.border = "solid 1px";
+	}
+
+	var a = form("Auth Ticket", "text" , authdata.AuthTicket);
+	a.i.setAttribute('style', 'width:95%');
+	isi.appendChild(a.c);
+	if(isicookie.__userData)a.i.style.border = "#ee0 solid 1px";
+	a.i.onchange = function(){
+		authdata.AuthTicket=this.value;
+	}
+	a.i.onfocus = function(){
+		this.style.border = "solid 1px";
+	}
+
+	//text about cookie
+	if(isicookie.__userData){
+		isi.appendChild(document.createTextNode("This autocomplete comes from your cookie. We store your data in cookie after you fill the form."));
+		isi.appendChild(document.createElement("br"));
+	}
+
+
+	var button = document.createElement("button");
+	button.setAttribute("class","b1");
+	button.innerHTML = "GO";
+	isi.appendChild(button);
+	body.appendChild(isi);
+
+
+	textarea.setAttribute("style",
+		"width: 100%;text-align:left;height: 300px;overflow-y:scroll;font-size:12px;border:solid 1px;background:#dde");
+	body.appendChild(textarea);
+
+	var writelog = function(e){
+		var i = textarea.innerHTML.split("\n");
+		if(setting.logmax && i.length>setting.logmax){
+			i.shift();
+			textarea.innerHTML = i.join("\n");
+		}
+		if(textarea.scrollTop > textarea.scrollHeight-300-30){
+			textarea.innerHTML += '<div style="border-bottom:1px dotted #444; ">'+ e +'</div>\n';
+			textarea.scrollTop = textarea.scrollHeight;
+		}else{
+			textarea.innerHTML += '<div style="border-bottom:1px dotted #444; ">'+ e +'</div>\n';
+		}
+	}
+	var writeerror = function(e){
+		writelog("<span style='color:red'>Error "+e.errorCode+" "+e.error +": " + e.errorMessage +"</span>");
+	}
+
+
+	var clearlog = document.createElement("a");
+	clearlog.setAttribute("href","#");
+	clearlog.innerHTML = "clear log";
+	body.appendChild(clearlog);
+	clearlog.onclick = function(){
+		textarea.innerHTML = null;
+	}
+
+	var buttonsetdefault = function(){
+		lanjut = false;
+		button.innerHTML = "START";
+	}
+
+	button.onclick = function(){
+		// this.outerHTML="";
+		lanjut = !lanjut;
+		if(!lanjut){
+			this.innerHTML = "START";
+			return;
+		}
+		this.innerHTML = "PAUSE";
+
+		if(alive)return;
+
+		if(loggedin && !alive){
+			return;
+		}
+		PlayFab.settings.titleId = authdata.TitleId;
+		var callback = function(r,e){
+			if(null!=r){
+				writelog("Login success");
+				authdata.PlayFabId = r.data.PlayFabId;
+				writelog("Playfab ID: "+ r.data.PlayFabId);
+				authdata.SessionTicket = r.data.SessionTicket;
+				writelog("Session Ticket: "+ r.data.SessionTicket);
+				loggedin = true;
+				gamelink.setAttribute('href',
+					'https://game276144.konggames.com/gamez/0027/6144/live/?DO_NOT_SHARE_THIS_LINK=1&kongregate_user_id='+
+					authdata.KongregateId+'&kongregate_game_auth_token='+
+					authdata.AuthTicket);
+				isi.appendChild(gamelink);
+
+				//cookie
+				var i ={
+					KongregateId : authdata.KongregateId,
+					AuthTicket : authdata.AuthTicket
+				}
+				var d = new Date();
+				d.setTime(d.getTime() + (7*24*60*60*1000));
+				document.cookie = "__userData=" + btoa(JSON.stringify(i)) + ";expires="+ d.toUTCString() + ";path=/";
+
+				gain();
+			}else if(null!=e){
+				console.log(e);
+				writeerror(e);
+				buttonsetdefault();
+				if(e.errorCode==2){
+					window.setTimeout(function(){
+						// PlayFabClientSDK.LoginWithKongregate(authdata, this);
+						// button.click();
+					},2000);
+
+				}
+
+			}
+		}
+		writelog("Logging in...");
+		PlayFabClientSDK.LoginWithKongregate(authdata, callback);
+	}
+
+	var xxx=0;
+
+	var gain = function(){
+		if(!loggedin)return;
+		if(lanjut){
+			alive=true;
+		}else{
+			if(alive){
+				writelog("Paused");
+			}
+			alive=false;
+			window.setTimeout(gain,2000);
+			return;
+		}
+
+		var a = new Date();
+		var customId = "-"+((a).getMinutes()<<1)+""+(35137513+parseInt(authdata.KongregateId)+a.getSeconds())+(a.getSeconds()<<2)+(a.getHours()%2?"1":"0");
+		writelog("Check account <b>"+customId+"</b>");
+		++xxx;
+		PlayFabClientSDK.LoginWithCustomID(
+			{
+				"CustomId": customId,
+				CreateAccount: true
+			}, function(r,e){
+				if(null!=e){
+					console.log(e);
+					writeerror(e);
+					if(e.errorCode == 1199){
+						writelog(xxx+" <span style='color:#f90'>Wait "+(setting.limitdelay/1000)+"s</span>");
+						xxx=0;
+						window.setTimeout(function(){gain()}, setting.limitdelay);
+					}else
+					if(e.errorCode == 2){
+						window.setTimeout(function(){gain();},1000);
+					}else{
+						buttonsetdefault()
+					}
+				}else
+				if(null!=r){
+					++xxx;
+					var callback = function(r,e){
+						if(null!=e){
+							writeerror(e);
+							if(e.errorCode == 1199){
+								writelog(xxx+" <span style='color:#f90'>Wait "+(setting.limitdelay/1000)+"s</span>");
+								xxx=0;
+								window.setTimeout(function(){gain()}, setting.limitdelay);
+							}else{
+								buttonsetdefault()
+							}
+						}else
+						if(null!=r){
+							writelog("Fighting");
+							++xxx;
+							PlayFabClientSDK.ExecuteCloudScript(
+							{
+								"RevisionSelection": "Specific",
+								"SpecificRevision": 102,
+								"FunctionName": "fight",
+								"FunctionParameter": {
+								"token": authdata.AuthTicket,
+								"kid": authdata.KongregateId,
+								"id": authdata.PlayFabId
+								}
+							}, function(r,e){
+								if(null!=e){
+									writeerror(e);
+									if(e.errorCode == 1199){
+										writelog(xxx+" <span style='color:#f90'>Wait "+(setting.limitdelay/1000)+"s</span>");
+										xxx=0;
+										window.setTimeout(function(){gain()}, setting.limitdelay);
+									}else{
+										buttonsetdefault()
+									}
+								}else if(null!=r){
+									try{
+										var i;
+										writelog("Fight result: <b>"
+											+(!(i=r.data.FunctionResult.battle.result)?
+												"<span style='color:#007'>draw</span>"
+												:i<0?"<span style='color:#070'>win</span>"
+												:"<span style='color:#700'>lose</span>"
+										)+"</b>");
+
+									}catch(e){
+										writelog("Fight abborted");
+										// console.log(r);
+									}
+									if(xxx%6==0){
+										var wait = setting.normaldelay;
+										writelog("<span style='color:#f90'>Wait "+(wait/1000)+"s</span>");
+										window.setTimeout(function(){gain()}, wait);
+									}else{
+										window.setTimeout(function(){gain()}, 1000);
+									}
+								}
+
+							});
+						}
+					}
+					
+					if(r.data.NewlyCreated){
+						writelog("Account created");
+						callback(1,null);
+					}else{
+						writelog("Account already created");
+						callback(1,null);
+						
+					}
+
+				}
+			});
+	}
+
+}
+
+</script>
